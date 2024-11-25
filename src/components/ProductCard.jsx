@@ -4,7 +4,7 @@ const ProductCard = () => {
   const product = {
     name: faker.commerce.productName(),
     price: faker.commerce.price(),
-    image: faker.image.imageUrl(),
+    image: faker.image.url(), 
     description: faker.lorem.sentence(),
   };
 
@@ -13,7 +13,7 @@ const ProductCard = () => {
       <img
         src={product.image}
         alt={product.name}
-        style={{ width: '100%', height: 'auto' }}
+        style={{ width: '100px', height: '100px', objectFit: 'cover' }}
       />
       <h3>{product.name}</h3>
       <p>{product.description}</p>
